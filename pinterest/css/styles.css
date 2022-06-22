@@ -8,18 +8,18 @@ body{
 
 header{
     width: 100%;
-    height: 8vh;
-    display: flex;
+    height: 9vh;
+    display:flex;
     flex-direction: row;
     justify-content: space-between;
     /* background: gray;  */
     align-items: center;
-    position: fixed;
-    background-color: whitesmoke;
+    position:fixed;
+    background-color: #fff;
     
-    
-    
+      
 }
+
 
 .imagen{
     display: flex;
@@ -28,6 +28,7 @@ header{
     width: 5%; */
     height: 100%;
     align-items:center;
+    
     
 }
 .inicio{
@@ -38,6 +39,7 @@ header{
     border-radius: 200px;
     background: black;
     color: #fff;
+    
     
 }
 
@@ -53,7 +55,7 @@ header{
 .siguiendo{
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: 5%;
     font-size: 25px;
     margin-left: 35px;
     border-radius: 200px; 
@@ -88,30 +90,37 @@ header{
     margin-left: 10px;
  }
 
- .notificacion{
+  .iconos{
     display: flex;
     flex-direction: row;
     border-radius: 100%;
     border: none;
-    width: 40px;
-    height: 40px;
-   background-color: transparent;
-   margin-left: 15px;
- }
- .notificacion i{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    margin-left: 15px;
+    align-items: center;
+ } 
+ /* .notificacion{
     display: flex;
     justify-content: center;
     width: 40px;
     height: 40px;
     
+ }  */
+
+ .iconos ion-icon{
+  font-size: 50px;
+  border-radius: 50%;
+  padding: 8px;
  }
 
- .notificacion:hover{
+ .iconos:hover{
    background-color: gainsboro; 
 
  }
 
- .iconot{
+ /* .iconot{
     display: flex;
     flex-direction: row;
     border-radius: 100%;
@@ -125,16 +134,17 @@ header{
  }
  .iconot:hover{
     background-color: gainsboro; 
- }
+ } */
 
-.notificacion a {
+/* .notificacion a {
     display: flex;
     justify-content: center;
     width: 40px;
     height: 40px;
     align-items: center;
-    text-decoration: none;
-}
+    text-decoration: none; 
+} */
+
 
 
 /* section{
@@ -156,130 +166,134 @@ header{
     padding: .5%;
     height: 100%;
     
-} */ 
+}
 
-/* img{
+img{
     border-radius: 5%;
     background-color: transparent;
-} */
+}  */
+
 
 .wrapper-card {
-    padding: 3rem;
-    max-width: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
-    justify-content: center;
-    grid-template-rows: masonry;
-    border: 3px solid blue;
-    gap: 0.5rem;
-    
-  }
-  
-  
-  .card {
-    width: 236px;
-    height: 450px;
-    border-radius: 15px;
-    margin: 2rem;
-    /* position: relative; */
-  }
-  
-  .card img {
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card::before {
-    content: '';
-    position: relative;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    border-radius: inherit;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease-out;
-  }
-  
-  .card:hover::before {
-    background-color: rgba(0, 0, 0, 0.25);
-  }
-  
-  .card:hover button {
-    display: inline-flex;
-  }
-  
-  .card:hover .lowermenu {
-    display: flex;
-  }
-  
-  .card:nth-child(3n) {
-    height: 555px;
-  }
-  
-  .card:nth-child(2n + 2) {
-    height: 366px;
-  }
-  
-  .card:nth-child(5n) {
-    height: 400px;
-  }
-  
-  /* menu superior de la carta */
-  .menu-superior {
-    position: absolute;
-    color: white;
-    background-color: red;
-    padding: 10px;
-    border-radius: 25px;
-    top: 15px;
-    right: 10px;
-    border-style: none;
+  padding: 4rem;
+  max-width: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+  justify-content: center;
+  grid-template-rows: masonry;
+  /* border: 3px solid blue; */
+  gap: 1rem;
+} 
+
+
+/* metodologia para hacer la carta */
+
+.card {
+  width: 236px;
+  height: 450px;
+  border-radius: 15px;
+  margin: 2rem;
+  position: relative;
+} 
+
+.card img {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease-out;
+}
+
+.card:hover::before {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.card:hover button {
+  display: inline-flex;
+}
+
+.card:hover .lowermenu {
+  display: flex;
+}
+
+.card:nth-child(3n) {
+  height: 555px;
+}
+
+.card:nth-child(2n + 2) {
+  height: 366px;
+}
+
+.card:nth-child(5n) {
+  height: 400px;
+}
+
+/* menu superior de la carta */
+
+.menu-superior {
+  position: absolute;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 25px;
+  top: 15px;
+  right: 10px;
+  border-style: none;
+  display: none;
+} 
+
+/* menu inferior de la carta */
+.lowermenu {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  bottom: 10px;
+  border-style: none;
+  text-decoration: none;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: none;
+}
+
+.lowermenu ion-icon {
+  background-color: lightgray;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.lowermenu button {
+  padding: 10px;
+  background-color: lightgray;
+  text-decoration: none;
+  border-radius: 15px;
+  border-style: none;
+}
+
+.lowermenu button a {
+  text-decoration: none;
+  border-style: none;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
     display: none;
   }
-  
-  /* menu inferior de la carta */
-  
-  .lowermenu {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    bottom: 10px;
-    border-style: none;
-    text-decoration: none;
-    align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    display: none;
-  }
-  
-  .lowermenu ion-icon {
-    background-color: lightgray;
-    font-size: 20px;
-    border-radius: 50%;
-    padding: 8px;
-  }
-  
-  .lowermenu button {
-    padding: 10px;
-    background-color: lightgray;
-    text-decoration: none;
-    border-radius: 15px;
-    border-style: none;
-  }
-  
-  .lowermenu button a {
-    text-decoration: none;
-    border-style: none;
-    color: white;
-  }
-  
-  @media only screen and (max-width: 800px) {
-    nav {
-      display: none;
-    }
-  }
+}
+
