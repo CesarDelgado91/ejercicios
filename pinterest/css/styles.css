@@ -16,7 +16,7 @@ header{
     align-items: center;
     position:fixed;
     background-color: #fff;
-    
+    z-index: 1;
       
 }
 
