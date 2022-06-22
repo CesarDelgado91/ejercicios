@@ -193,7 +193,7 @@ img{
   height: 450px;
   border-radius: 15px;
   margin: 2rem;
-  position: relative;
+  position: relative; 
 } 
 
 .card img {
@@ -218,6 +218,7 @@ img{
 
 .card:hover::before {
   background-color: rgba(0, 0, 0, 0.25);
+  cursor: zoom-in;
 }
 
 .card:hover button {
