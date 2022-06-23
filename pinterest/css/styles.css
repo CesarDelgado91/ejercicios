@@ -8,10 +8,11 @@ body{
 
 header{
     width: 100%;
-    height: 8vh;
+    height: 9vh;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    /* background: gray;  */
     align-items: center;
     position:fixed;
     background-color: #fff;
@@ -23,6 +24,8 @@ header{
 .imagen{
     display: flex;
     justify-content: center;
+    /* flex-direction: row;
+    width: 5%; */
     height: 100%;
     align-items:center;
     
@@ -98,12 +101,22 @@ header{
     margin-left: 15px;
     align-items: center;
  } 
-
+ /* .notificacion{
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    
+ }  */
 
  .iconos ion-icon{
-  font-size: 50px;
-  border-radius: 50%;
-  padding: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+  justify-content: center;
+  grid-template-rows: masonry;
+  /* border: 3px solid blue; */
+  gap: 1rem;
+  background-color: #e9e9e9;
+ 
  }
 
  .iconos:hover{
@@ -120,6 +133,7 @@ header{
   grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
   justify-content: center;
   grid-template-rows: masonry;
+  /* border: 3px solid blue; */
   gap: 1rem;
   background-color: #e9e9e9;
 
@@ -234,8 +248,55 @@ header{
   color: white;
 }
 
+@media only screen and (max-width: 800px) {
+  nav {
+    display: none;
+  }
+}
 
- 
+
+
+/* @media only screen and (min-width: 600px) and ( max-width : 950px ) {
+ header{
+  flex-direction: row;
+  height: 10vh;
+  width: 143vh;
+ } */
+  
+/* 
+@media only screen and (max-width: 1010px) {
+  .siguiendo {
+    display:inline-block;
+    font-size: 15px;
+  }
+  .inicio{
+    display:inline-block;
+    font-size: 15px;
+    
+  }
+
+  input{
+    display: none;
+  }
+  .buscar i{
+    display:inline-block;
+    font-size: 15px;
+     margin: 0;
+  }
+  .hoy{
+    display:inline-block;
+    font-size: 15px;
+  }
+  .imagen{
+     height:25%;
+     width: auto;
+  }
+  .iconos ion-icon{
+
+    font-size: 25px;
+  }
+} */
+
 
 @media only screen and (max-width: 1010px) {
   .siguiendo {
@@ -272,8 +333,6 @@ header{
     background: none;
   }
 }
-
-
 @media only screen and (max-width: 400px) {
   .siguiendo{
     display: none;
@@ -287,12 +346,12 @@ header{
 @media only screen and (max-width: 375px) {
   .siguiendo {
     display:none;
-    
+
   }
   .inicio{
     display:inline-block;
     font-size: 15px;
-    
+
   }
 
   input{
@@ -301,11 +360,11 @@ header{
   .buscar i{
     display:inline-block;
     font-size: 15px;
-     margin: 0;
+
   }
   .hoy{
     display:none;
-    
+
   }
   .imagen{
      height:25%;
@@ -323,12 +382,12 @@ header{
 @media only screen and (max-width: 414px) {
   .siguiendo {
     display:none;
-    
+
   }
   .inicio{
     display:inline-block;
     font-size: 15px;
-    
+
   }
 
   input{
@@ -341,7 +400,7 @@ header{
   }
   .hoy{
     display:none;
-    
+
   }
   .imagen{
      height:25%;
@@ -359,15 +418,15 @@ header{
 @media only screen and (max-width: 360px) {
   .siguiendo {
     display:none;
-    
+
   }
   .inicio{
     display:inline-block;
     font-size: 10px;
-    
+
   }
 
-  
+
   .buscar i{
     display:inline-block;
     font-size: 15px;
@@ -375,7 +434,7 @@ header{
   }
   .hoy{
     display:none;
-    
+
   }
   .imagen{
      height:25%;
@@ -399,4 +458,10 @@ header{
   .buscar{
     background: gainsboro;
 }
-}
+} 
+
+
+
+
+
+
